@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+ 
+<body>
+        <div class="row">
+            <div class="col-6 left">
+                <h1 class="heading">Student Login</h1>
+                <p>make sure your information is corrrect</p>
+                <div class="imageContainer">
+                    <img src="images/education.svg" alt="" class="imageHome" >
+                </div>
+            </div>
+            <div class="col-6 right">
+                <form action="" method="post" id="myForm">
+                    <img src="images/logo.png" alt="" class="logo" ><br>
+                    <div id="errorMessage"></div>
+                    <label for="Email">Email Addrress</label><br>
+                        <input type="email" id="email" placeholder="Enter Email Address" required><br><br>
+                    <label for="password" >Password</label><br>
+                        <input type="password" name="password" id="password" placeholder="password"><br><br>
+                    <button type="submit" id="submitBtn">login</button>
+                    <div class="link">
+                        <a href="#" class="">Create a new account</a>
+                        <a href="#">Forget your password</a>
+                    </div>
+                </form>      
+            </div>
+            
+            
+        </div>
+        <div class="tunnex">Created by tunnex</div>
+        <script src="form.js"></script>
+</body>
+</html>
