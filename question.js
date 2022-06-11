@@ -17,7 +17,7 @@ questionArray = [
         correctAnswer: "Zeus and Hermes"
     },
     {
-        question: "3) To the question of the Philippian Jailer, ‘Men, what must I do to be saved? Paulreplied,",
+        question: "3) To the question of the Philippian Jailer, ‘Men, what must I do to be saved? Paul replied,",
         a: 'confess your sins and give alms',
         b: "believe in the Lord Jesus",
         c: "release us and wash our wounds",
@@ -43,7 +43,7 @@ questionArray = [
     {
         question: " 6) Gideon was able to defeat the Midianites with a reduced number of soldiers because he",
         a: "was a good fighter",
-        b: " was a prudentwarrior",
+        b: " was a prudent warrior",
         c: "had better weapons",
         d: "had faith in God",
         correctAnswer: "had faith in God" 
@@ -112,7 +112,7 @@ function nextBtn () {
     
         if(inputcheck.value === questionArray[questGlobal].correctAnswer){
                 score += 5
-                alert(`you score ${score}`)
+                // alert(`you score ${score}`)
             } 
         
         questGlobal++
@@ -139,4 +139,44 @@ logOut.addEventListener('click', logOutNow)
 function logOutNow() {
     window.location.assign("/index.html")
     
+}
+
+// Timer functionality
+
+let totalTime = 120;
+let min = 0;
+let sec = 0;
+let counter = 0;
+let timer = setInterval(myTimer, 1000)
+
+
+
+// TIME INTERVAL
+function myTimer(){
+    counter++;
+    min = Math.floor((totalTime - counter)/60)
+    sec = totalTime - min * 60 - counter
+    // console.log(sec);
+
+    
+// const timerBox = document.getElementById('timerBox')
+const timeLeft = document.getElementById('timeLeft')
+timeLeft.textContent = min + " : " + sec  
+timeLeft.style.fontSize = '1.5rem'
+// timerBox.appendChild(timeLeft)
+
+if(counter === totalTime){
+    clearInterval(timer)
+    timeUp.style.display = 'block'
+    questionCont.style.display = 'none'
+    questionTag.style.display = 'none'
+    next.style.display = 'none'
+    btn.style.display = 'none'
+    scoreContainer.textContent= `You score ${score} / ${questionsArray.length * 5}`
+    scoreContainer.style.fontSize = '40px'
+    scoreContainer.style.paddingTop = '100px'
+    scoreContainer.style.textAlign = 'center'
+    btn3.style.display = 'block'
+    logOut.style.display = 'block'
+}
 }

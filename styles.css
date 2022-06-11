@@ -2,33 +2,53 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
 }
+
 .row {
-    margin-top: 60px;
-    margin-left: 170px;
-    width: 70% !important;
-    height: 520px !important;
-    background-color: aqua;
+    /* margin: auto; */
+    width: 90% !important;
     display: flex;
+    height: 90vh;
+    background-color: aqua;
     box-shadow: 2px 2px 10px black;
     align-items: center;
-    justify-content: center;
-    /* grid-template-columns: 1fr 1fr; */
+    justify-content: center; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form{
+    margin: 40px;
 }
 body{
-    background-color: #00c9c9;
+    background-color: #106868;
+    
 }
 
 /* Left styling  */
 .heading{
     font-weight: bolder;
+    text-align: center;
+    font-size: 3rem;
+}
+p{
+    text-align: center;
 }
 .imageHome{
-    width: 70%;
-    margin-top: 30px;
+    width: 50%;
+    margin-left: 100px; 
+    left: 50%; 
+    margin-top: 50px;
     box-sizing: border-box;
-}
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)*/
+}  
 .left {
     margin: auto;
     width: 50%;
@@ -38,6 +58,7 @@ body{
 .right{
     width: 50%;
     padding: 20px;
+    /* text-align: center; */
 }
 input{
     width: 100%;
@@ -50,6 +71,7 @@ input{
 input :active {
     border: none;
 }
+
 .logo{
     margin: auto;
     width: 30%;
@@ -96,11 +118,45 @@ a{
 
 
 
-.tunnex{
-    font-size: 14px;
-    width: 140px;
-    text-align: center;
-    margin: auto;
-    padding-top: 20px;
-    font-weight: bolder;
-}
+
+
+@media screen and (max-width: 600px) {
+    .row {
+        /* margin: auto; */
+        display: block;
+         width: 90% !important;
+         height: 100%;
+         background-color: aqua;
+         /* position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%); */
+        
+     }
+     .imageHome{
+        display: none;
+     }
+     .left {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    /* Right styling  */
+    .right{
+        width: 100%;
+        padding: 20px;
+        /* text-align: center; */
+    }
+    .logo{
+        margin: auto;
+        width: 30%;
+        text-align: center;
+        margin-left: 30%;
+    }
+    .heading{
+        font-weight: bolder;
+        text-align: center;
+        font-size: 3rem;
+        padding-top: 15px;
+    }
+  }
