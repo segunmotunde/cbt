@@ -162,21 +162,21 @@ function myTimer(){
 // const timerBox = document.getElementById('timerBox')
 const timeLeft = document.getElementById('timeLeft')
 timeLeft.textContent = min + " : " + sec  
-timeLeft.style.fontSize = '1.5rem'
+// timeLeft.style.fontSize = '1.5rem'
 // timerBox.appendChild(timeLeft)
 
 if(counter === totalTime){
-    clearInterval(timer)
-    timeUp.style.display = 'block'
-    questionCont.style.display = 'none'
-    questionTag.style.display = 'none'
-    next.style.display = 'none'
-    btn.style.display = 'none'
-    scoreContainer.textContent= `You score ${score} / ${questionsArray.length * 5}`
-    scoreContainer.style.fontSize = '40px'
-    scoreContainer.style.paddingTop = '100px'
-    scoreContainer.style.textAlign = 'center'
-    btn3.style.display = 'block'
-    logOut.style.display = 'block'
+    // clearInterval(timer)
+    // timeUp.style.display = 'block'
+    // questionCont.style.display = 'none'
+    // questionTag.style.display = 'none'
+    // next.style.display = 'none'
+    // btn.style.display = 'none'
+    // scoreContainer.textContent= `You score ${score} / ${questionsArray.length * 5}`
+    // scoreContainer.style.fontSize = '40px'
+    // scoreContainer.style.paddingTop = '100px'
+    // scoreContainer.style.textAlign = 'center'
+    // btn3.style.display = 'block'
+    // logOut.style.display = 'block'
 }
 }

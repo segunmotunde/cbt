@@ -22,8 +22,20 @@
 
  
 .logo{
-    width: 50px;
+    width: 70px;
 }
+.navbrand{
+display: flex;
+}
+.time{
+    padding: 15px;
+}
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: -20px;
+}
+
 #search{
     margin: 14px;
     width: 220px;
@@ -80,7 +92,6 @@
 }
 
 
-
 /* SMALL SCREEN */
 @media screen and (max-width: 600px) {
     .float{
@@ -93,6 +104,14 @@
         width: 100%;
 
     }
-   
-
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        
+    }
+    #search{
+        margin: 14px;
+        width: 150px;
+        height: 26px;
+    }
 }
