@@ -164,12 +164,12 @@ function submitScore() {
     optionTag.style.display = 'none';
     submitBtn.style.display = 'none';
     // next.style.display = 'none';
-    finalGrade.innerText = `Your Score is ${score} / ${questionArray.length * 5};`
+    finalGrade.innerText = `Your Score is ${score} / ${questionArray.length * 5}`
     logOut.style.display = 'block'
     printPaper.style.display = 'block'
 }
 // ADD EVENT LSITENER TO THE PRINT  FUNCTION
-print.addEventListener('click', printNow)
+printPaper.addEventListener('click', printNow)
 
 function printNow() {
     window.print();

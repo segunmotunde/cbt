@@ -62,7 +62,7 @@ a {
 }
 .float{
     display: flex;
-    padding: 30px;
+    
     
 }
 #optionTag, #questionTag{
@@ -105,11 +105,10 @@ a {
 @media screen and (max-width: 600px) {
     .float{
         display: block;
-        padding: 30px;
         
     }
     #optionTag, #questionTag{
-        margin: 20px;
+        margin: 10px;
         width: 100%;
 
     }
