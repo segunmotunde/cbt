@@ -38,7 +38,7 @@ display: flex;
 a {
     text-decoration: none;
     font-size: 1.5rem;
-    line-height: -20px;
+    /* line-height: -20px; */
 }
 
 #search{
@@ -68,7 +68,10 @@ a {
 #optionTag, #questionTag{
     margin: 30px;
 }
- #next, #submitBtn, #logOut{
+#questionTag{
+    max-width: 300px;
+}
+ #next, #submitBtn, #logOut, #print {
     width: 149px;
     height: 50px;
     border-radius: 20px;
@@ -90,10 +93,11 @@ a {
     margin: auto;
 }
 #finalGrade {
-    font-size: 25px;
+    padding-top: 30px;
+    font-size: 3rem;
     font-weight: bolder;
     text-align: center;
-    margin: auto;
+    color: red;
 }
 
 

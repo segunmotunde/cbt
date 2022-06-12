@@ -47,8 +47,40 @@ questionArray = [
         c: "had better weapons",
         d: "had faith in God",
         correctAnswer: "had faith in God" 
+    },
+    {
+        question: "7) Who among the following was sold to the Ishaemlites for twenty shekels because of his dreams?",
+        a: "Moses",
+        b: "Joseph",
+        c: "Jacob",
+        d: "Ishmael",
+        correctAnswer: "Joseph"
+    },
+    {
+        question: "8) The children of Israel asked Samuel for a king because",
+        a: "It was in their constitution",      
+        b: "Their former kind was killed in battle ",
+        c: "They desired to be like the heathen nations around them",
+        d: "They were tired of military regime",
+        correctAnswer: "They desired to be like the heathen nations around them"
+    },
+    {
+        question: "9)  He was a king remembered for his erecting a mighty temple for the worship of God:",
+        a: "Solomon",
+        b: "Josiah",
+        c: "Saul",
+        d: "David",
+        correctAnswer: "Solomon"
+    },
+    {question: "10) Joseph's brothers hated him more because",
+        a: "Of the coat Jacob gave him",
+        b: "He was the son of Rachael",
+        c: "His father loved him",
+        d: "Of his dreams",
+        correctAnswer: "Of his dreams"
     }
 ]
+
 console.log(questionArray[0].question);
 // DECLARATION OF VARIABLE
 const questionCont = document.getElementById('questionCont')
@@ -57,6 +89,7 @@ const optionTag = document.getElementById('optionTag')
 const previous = document.getElementById('previous')
 const next = document.getElementById('next')
 const submitBtn = document.getElementById('submitBtn')
+const printPaper = document.getElementById('print')
 const finalGrade = document.getElementById('finalGrade')
 const logOut = document.getElementById('logOut')
 
@@ -74,6 +107,7 @@ const inputCheck = document.querySelector('input[type = radio]:checked')
 // HIDE THE SUBMIT BUTTON
 submitBtn.style.display ="none"
 logOut.style.display = 'none'
+printPaper.style.display = 'none'
 
 // CREATE A FUNCTION THAT WILL DISPLAY THE QUESTION AND THE OPTION ON THE BROWSER
 dispQuestion = () => {
@@ -132,7 +166,16 @@ function submitScore() {
     // next.style.display = 'none';
     finalGrade.innerText = `Your Score is ${score} / ${questionArray.length * 5};`
     logOut.style.display = 'block'
+    printPaper.style.display = 'block'
 }
+// ADD EVENT LSITENER TO THE PRINT  FUNCTION
+print.addEventListener('click', printNow)
+
+function printNow() {
+    window.print();
+    
+}
+
 // ADD EVENT LSITENER TO THE FUNCTION
 logOut.addEventListener('click', logOutNow)
 
@@ -166,17 +209,17 @@ timeLeft.textContent = min + " : " + sec
 // timerBox.appendChild(timeLeft)
 
 if(counter === totalTime){
-    // clearInterval(timer)
-    // timeUp.style.display = 'block'
-    // questionCont.style.display = 'none'
-    // questionTag.style.display = 'none'
-    // next.style.display = 'none'
-    // btn.style.display = 'none'
-    // scoreContainer.textContent= `You score ${score} / ${questionsArray.length * 5}`
-    // scoreContainer.style.fontSize = '40px'
-    // scoreContainer.style.paddingTop = '100px'
-    // scoreContainer.style.textAlign = 'center'
-    // btn3.style.display = 'block'
-    // logOut.style.display = 'block'
+    clearInterval(timer)
+    timeUp.style.display = 'block'
+    questionCont.style.display = 'none'
+    questionTag.style.display = 'none'
+    next.style.display = 'none'
+    btn.style.display = 'none'
+    scoreContainer.textContent= `You score ${score} / ${questionsArray.length * 5}`
+    scoreContainer.style.fontSize = '40px'
+    scoreContainer.style.paddingTop = '100px'
+    scoreContainer.style.textAlign = 'center'
+    btn3.style.display = 'block'
+    logOut.style.display = 'block'
 }
 }
