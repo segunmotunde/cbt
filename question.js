@@ -184,6 +184,7 @@ function logOutNow() {
     
 }
 
+
 // Timer functionality
 
 let totalTime = 120;
@@ -192,9 +193,6 @@ let sec = 0;
 let counter = 0;
 let timer = setInterval(myTimer, 1000)
 
-
-
-// TIME INTERVAL
 function myTimer(){
     counter++;
     min = Math.floor((totalTime - counter)/60)
@@ -205,7 +203,7 @@ function myTimer(){
 // const timerBox = document.getElementById('timerBox')
 const timeLeft = document.getElementById('timeLeft')
 timeLeft.textContent = min + " : " + sec  
-// timeLeft.style.fontSize = '1.5rem'
+timeLeft.style.fontSize = '1.5rem'
 // timerBox.appendChild(timeLeft)
 
 if(counter === totalTime){
@@ -219,7 +217,16 @@ if(counter === totalTime){
     scoreContainer.style.fontSize = '40px'
     scoreContainer.style.paddingTop = '100px'
     scoreContainer.style.textAlign = 'center'
-    btn3.style.display = 'block'
-    logOut.style.display = 'block'
+    printPaper.style.display = 'block'
 }
 }
+
+
+
+// const btnGoto = document.getElementById('btnGoto')
+
+// btnGoto.addEventListener('click', btnGoto)
+
+// function btnGoto(){
+//     window.location = '/testing.html'
+// }
