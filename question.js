@@ -120,10 +120,10 @@ dispQuestion = () => {
     questionTag.innerText = getQuestion;
     // DISPLY OPTION TAGS
     let options = `
-    A. <input type="radio" name="option" value="${myQuest.a}" id="">${myQuest.a}<br><br>
-    B. <input type="radio" name="option" value="${myQuest.b}" id="">${myQuest.b}<br><br>
-    C. <input type="radio" name="option" value="${myQuest.c}" id="">${myQuest.c}<br><br>
-    D. <input type="radio" name="option" value="${myQuest.d}" id="">${myQuest.d}<br><br>
+    A. <input type="radio" name="option" value="${myQuest.a}" id="">&nbsp &nbsp ${myQuest.a}<br><br>
+    B. <input type="radio" name="option" value="${myQuest.b}" id="">&nbsp &nbsp${myQuest.b}<br><br>
+    C. <input type="radio" name="option" value="${myQuest.c}" id="">&nbsp &nbsp${myQuest.c}<br><br>
+    D. <input type="radio" name="option" value="${myQuest.d}" id="">&nbsp &nbsp${myQuest.d}<br><br>
     `
     optionTag.innerHTML = options
 }
