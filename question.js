@@ -81,9 +81,10 @@ questionArray = [
     }
 ]
 
-console.log(questionArray[0].question);
+
 // DECLARATION OF VARIABLE
 const questionCont = document.getElementById('questionCont')
+const timeUp = document.getElementById("timeUp")
 const questionTag = document.getElementById('questionTag')
 const optionTag = document.getElementById('optionTag')
 const previous = document.getElementById('previous')
@@ -92,6 +93,7 @@ const submitBtn = document.getElementById('submitBtn')
 const printPaper = document.getElementById('print')
 const finalGrade = document.getElementById('finalGrade')
 const logOut = document.getElementById('logOut')
+
 
 
 
@@ -108,6 +110,7 @@ const inputCheck = document.querySelector('input[type = radio]:checked')
 submitBtn.style.display ="none"
 logOut.style.display = 'none'
 printPaper.style.display = 'none'
+timeUp.style.display = 'none'
 
 // CREATE A FUNCTION THAT WILL DISPLAY THE QUESTION AND THE OPTION ON THE BROWSER
 dispQuestion = () => {
@@ -187,7 +190,7 @@ function logOutNow() {
 
 // Timer functionality
 
-let totalTime = 120;
+let totalTime = 20;
 let min = 0;
 let sec = 0;
 let counter = 0;
@@ -207,18 +210,17 @@ timeLeft.style.fontSize = '1.5rem'
 // timerBox.appendChild(timeLeft)
 
 if(counter === totalTime){
-    console.log("timer is working");
+    console.log("timer is working")
     clearInterval(timer)
-    timeUp.style.display = "block";
-    questionCont.style.display = 'none';
+    timeUp.style.display = 'block'
     questionTag.style.display = 'none';
-    next.style.display = 'none';
-    btn.style.display = 'none';
-    scoreContainer.textContent= `You score ${score} / ${questionsArray.length * 5}`;
-    scoreContainer.style.fontSize = '40px';
-    scoreContainer.style.paddingTop = '100px';
-    scoreContainer.style.textAlign = 'center';
-    printPaper.style.display = 'block';
+    optionTag.style.display = 'none';
+    submitBtn.style.display = 'none';
+    next.style.display = 'none'
+    finalGrade.innerText = `Your Score is ${score} / ${questionArray.length * 5}`
+    logOut.style.display = 'block'
+    printPaper.style.display = 'block'
+    finalGrade.style.textAlign = 'center'
 }
 }
 
