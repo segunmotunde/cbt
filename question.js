@@ -190,7 +190,7 @@ function logOutNow() {
 
 // Timer functionality
 
-let totalTime = 20;
+let totalTime = 120;
 let min = 0;
 let sec = 0;
 let counter = 0;
